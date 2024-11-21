@@ -1,14 +1,16 @@
-[build]
-  # The directory to build your React app into (usually 'build' for React apps)
-  publish = "build"
-  
-  # The command to build your React app (using 'npm' or 'yarn' depending on your package manager)
-  command = "npm run build"  # Or "yarn build" if you're using Yarn
-  
-  # Optional: If your app uses a specific Node version
-  environment = { 
-    NODE_VERSION = "18"  # Change to the version you need
-  }
+The error you're encountering, "Could not parse configuration file", indicates that there's a syntax issue in your netlify.toml file. Specifically, the issue arises from the incorrect usage of the environment section.
 
-[[plugins]]
-  package = "@netlify/plugin-react"
+In TOML files, inline tables (or objects) like the one you tried to use for environment need to be defined correctly. The issue is with the way you've written the environment block.
+Correcting the Syntax
+
+Instead of using the {} syntax (which is used for inline arrays or objects in some formats), you should use the following format for defining environment variables in the netlify.toml file.
+
+Here’s how you can fix it:
+
+[build]
+  publish = "build"
+  command = "npm run build"
+
+  # Environment variables block (corrected syntax)
+  [build.environment]
+    NODE_VERSION = "18"  # Specify the Node version you want to use
