@@ -1,0 +1,14 @@
+[build]
+  # The directory to build your React app into (usually 'build' for React apps)
+  publish = "build"
+  
+  # The command to build your React app (using 'npm' or 'yarn' depending on your package manager)
+  command = "npm run build"  # Or "yarn build" if you're using Yarn
+  
+  # Optional: If your app uses a specific Node version
+  environment = { 
+    NODE_VERSION = "18.16.0"  # Change to the version you need
+  }
+
+[[plugins]]
+  package = "@netlify/plugin-react"
