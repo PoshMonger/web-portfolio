@@ -8,7 +8,6 @@ import canvasGame from '../assets/img/projects/canvasgame.png'
 import threeDprojection from '../assets/img/projects/3dProjection.png'
 import UIeffects from '../assets/img/projects/UIeffects.png'
 import passwordGen from '../assets/img/projects/passwordGenerator.png'
-import colorSharp from "../assets/img/color-sharp.png"
 import pythontank from '../assets/img/python3dtank.png'
 
 import TrackVisibility from 'react-on-screen';
@@ -147,7 +146,7 @@ export const Projects = () => {
                       <Tab.Pane eventKey="third">
                       <Row xs={12} sm={12} md={12} lg={12} xl={12}>
                       <p>If you wish to see some of my other repositories feel free to <p className='myGitHub'>check out my github:</p>
-                       <br/><a href='https://github.com/PoshMonger' target='blank'> <Button className='proj-button-github'>PoshMonger</Button></a>
+                       <br/><a href='https://github.com/PoshMonger' target='blank' rel="noreferrer"> <Button className='proj-button-github'>PoshMonger</Button></a>
                         </p>
                           
                         </Row>

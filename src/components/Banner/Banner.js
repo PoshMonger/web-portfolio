@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import TrackVisibility from "react-on-screen";
 
@@ -12,7 +11,6 @@ export const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
   const toRotate = ["Front-End Dev", "Web Designer", "UI/UX Designer"];
   const period = 2000;
 
@@ -39,17 +37,14 @@ export const Banner = () => {
       setDelta((prevDelta) => prevDelta / 2);
     }
 
-    if (!isDeleting && updatedText === fullText) {
+    if (!isDeleting && updatedText == fullText) {
       setIsDeleting(true);
-      setIndex((prevIndex) => prevIndex - 1);
       setDelta(period);
-    } else if (isDeleting && updatedText === "") {
+    } else if (isDeleting && updatedText == "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setIndex(1);
       setDelta(500);
     } else {
-      setIndex((prevIndex) => prevIndex + 1);
     }
   };
 
@@ -85,6 +80,7 @@ export const Banner = () => {
                     <a
                       className="contact-link"
                       target="_blank"
+                      rel="noreferrer"
                       href="mailto:jschlitzii@gmail.com"
                     >
                       {" "}
