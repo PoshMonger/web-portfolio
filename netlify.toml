@@ -7,7 +7,7 @@
   
   # Optional: If your app uses a specific Node version
   environment = { 
-    NODE_VERSION = "18.16.0"  # Change to the version you need
+    NODE_VERSION = "18"  # Change to the version you need
   }
 
 [[plugins]]
