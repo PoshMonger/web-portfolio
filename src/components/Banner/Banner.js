@@ -22,7 +22,7 @@ export const Banner = () => {
     return () => {
       clearInterval(ticker);
     };
-  }, [text]);
+  });
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -37,10 +37,10 @@ export const Banner = () => {
       setDelta((prevDelta) => prevDelta / 2);
     }
 
-    if (!isDeleting && updatedText == fullText) {
+    if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
       setDelta(period);
-    } else if (isDeleting && updatedText == "") {
+    } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setDelta(500);
@@ -102,11 +102,11 @@ export const Banner = () => {
             <div className="img-cont">
               <div
                 className={
-                  whosThatPortrait == 1
+                  whosThatPortrait === 1
                     ? "portrait-ease-in"
-                    : whosThatPortrait == 2
+                    : whosThatPortrait === 2
                     ? "portrait-ease-out"
-                    : whosThatPortrait == 3
+                    : whosThatPortrait === 3
                     ? "image-ease-in"
                     : "image-ease-out"
                 }
