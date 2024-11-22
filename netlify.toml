@@ -5,6 +5,3 @@
   # Define environment variables
   [build.environment]
     NODE_VERSION = "18"  # Replace with your preferred Node version
-
-[[plugins]]
-  package = "@netlify/plugin-react"
