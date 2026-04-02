@@ -9,10 +9,9 @@ import threeDprojection from '../assets/img/projects/3dProjection.png'
 import UIeffects from '../assets/img/projects/UIeffects.png'
 import passwordGen from '../assets/img/projects/passwordGenerator.png'
 import pythontank from '../assets/img/python3dtank.png'
-import localSockets from '../assets/img/projects/local_sockets.png'
-import openChatbot from '../assets/img/projects/open_chatbot.png'
-import reactSlidePuzzle from '../assets/img/projects/react_slide_puzzle.png'
-import dearDiary from '../assets/img/projects/dear_diary.png'
+import localSockets from '../assets/img/projects/local_sockets_live.png'
+import openChatbot from '../assets/img/projects/smart_parrot_home.png'
+import reactSlidePuzzle from '../assets/img/projects/react_slide_puzzle_live.png'
 
 import TrackVisibility from 'react-on-screen';
 
@@ -38,10 +37,10 @@ export const Projects = () => {
       github: 'https://github.com/PoshMonger/react-slide-puzzle'
     },
     {
-      title: "Dear Diary",
-      description: "React diary application",
-      imgUrl: dearDiary,
-      github: 'https://github.com/PoshMonger/deardiary'
+      title: "UI/UX Effects Library (beta)",
+      description: "Javascript and CSS library to add to vanilla web projects to add basic UI effects like side menu and focusing an image",
+      imgUrl: UIeffects,
+      github: 'https://github.com/PoshMonger/UI-Effects',
     },
   ];
 
@@ -96,12 +95,6 @@ export const Projects = () => {
       imgUrl: joeSays,
       deploy: 'https://poshmonger.github.io/Joe-Says/',
       github: 'https://github.com/PoshMonger/Joe-Says'
-    },
-    {
-      title: "UI/UX Effects Library (beta)",
-      description: "Javascript and CSS library to add to vanilla web projects to add basic UI effects like side menu and focusing an image",
-      imgUrl: UIeffects,
-      github: 'https://github.com/PoshMonger/UI-Effects',
     },
   ];
   return (
