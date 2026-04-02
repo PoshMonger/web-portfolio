@@ -15,6 +15,14 @@ export const Banner = () => {
   const period = 2000;
 
   useEffect(() => {
+    const portraitTicker = setInterval(() => {
+      setWhosThatPortrait((prev) => (prev < 4 ? prev + 1 : 1));
+    }, 5000);
+
+    return () => clearInterval(portraitTicker);
+  }, []);
+
+  useEffect(() => {
     let ticker = setInterval(() => {
       tick();
     }, delta);
