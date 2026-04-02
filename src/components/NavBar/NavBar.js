@@ -40,21 +40,32 @@ const [nav,setNav]= useState(false)
     setActiveLink(value);
   }
 
+  const onNavLinkClick = (value) => {
+    onUpdateActiveLink(value);
+    // Only auto-close when in collapsed (mobile) mode for expand="lg"
+    if (window.innerWidth < 992) setNav(false);
+  }
+
   return (
     <Router>
-      <Navbar  expand="lg" className={scrolled ? "scrolled" :nav ===true ? 'navOpen': ""}>
+      <Navbar
+        expand="lg"
+        expanded={nav}
+        onToggle={(nextExpanded) => setNav(nextExpanded)}
+        className={`${(scrolled || nav) ? "scrolled" : ""} ${nav ? "navOpen" : ""}`}
+      >
         <Container>
           <Navbar.Brand  href="/">
            <img src={nameOnlyLogo} alt="Logo" className="logo" ></img>
           </Navbar.Brand>
           <Navbar.Toggle  aria-controls="basic-navbar-nav">
-            <span onClick={()=>{ nav ===false && scrolled ===false ?setNav(true): nav===true? setNav(false):console.log()}} className="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse  id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onNavLinkClick('home')}>Home</Nav.Link>
+              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onNavLinkClick('skills')}>Skills</Nav.Link>
+              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onNavLinkClick('projects')}>Projects</Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">

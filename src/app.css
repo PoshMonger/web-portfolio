@@ -297,6 +297,8 @@ h3 {
   margin: auto;
   margin-bottom: 35px;
   height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: #121111;
 
 
 }
