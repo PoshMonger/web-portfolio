@@ -83,7 +83,7 @@ export const Banner = () => {
                     </p>
 
                     <p className="banner-text">
-                     and passionate technologist who specializes in creating responsive and aesthetically pleasing web applications.
+                     and passionate technologist with a curiousity and interest in just about everything our world has to offer. 
                     </p>
                     <a
                       className="contact-link"
