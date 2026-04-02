@@ -9,12 +9,43 @@ import threeDprojection from '../assets/img/projects/3dProjection.png'
 import UIeffects from '../assets/img/projects/UIeffects.png'
 import passwordGen from '../assets/img/projects/passwordGenerator.png'
 import pythontank from '../assets/img/python3dtank.png'
+import localSockets from '../assets/img/projects/local_sockets.png'
+import openChatbot from '../assets/img/projects/open_chatbot.png'
+import reactSlidePuzzle from '../assets/img/projects/react_slide_puzzle.png'
+import dearDiary from '../assets/img/projects/dear_diary.png'
 
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
 
   const projects_tab1 = [
+    {
+      title: "Open AI Chatbot",
+      description: "OpenAI, LangChain, Next.js, and DataStax chatbot trained on scraped web pages",
+      imgUrl: openChatbot,
+      github: 'https://github.com/PoshMonger/open-chatbot'
+    },
+    {
+      title: "Local Sockets",
+      description: "WebSockets accessible on local host for guests of LAN to broadcast or stream video",
+      imgUrl: localSockets,
+      github: 'https://github.com/PoshMonger/local-sockets'
+    },
+    {
+      title: "React Slide Puzzle",
+      description: "React slide puzzle with image upload feature",
+      imgUrl: reactSlidePuzzle,
+      github: 'https://github.com/PoshMonger/react-slide-puzzle'
+    },
+    {
+      title: "Dear Diary",
+      description: "React diary application",
+      imgUrl: dearDiary,
+      github: 'https://github.com/PoshMonger/deardiary'
+    },
+  ];
+
+  const projects_tab2 = [
     {
       title: "Dealuploader.com",
       description: "MERN stack application in beta for SWFL wholesaling start-up. Used as proof of concept and still in development",
@@ -27,9 +58,7 @@ export const Projects = () => {
       description: "3D projection using .obj files, and transformation matrices, rotating on all three axes, translating, and scaling. ",
       imgUrl: pythontank,
       github: 'https://github.com/PoshMonger/3D-Projection-with-Python',
-    
     },
-
     {
       title: "Password Generator",
       description: "Vanilla Javascript password generation app with GUI",
@@ -37,7 +66,6 @@ export const Projects = () => {
       github: 'https://github.com/PoshMonger/Password-Generator',
       deploy: 'https://poshmonger.github.io/Password-Generator/'
     },
- 
     {
       title: "Tropical Nucleus",
       description: "Animated pixelation algorithm on art work by Mark T. Cole. Built with instance of Image class and HTML canvas",
@@ -45,11 +73,9 @@ export const Projects = () => {
       github: 'https://github.com/PoshMonger/Tropical_Nucleus-Art-By-Mark-T-Cole-',
       deploy: 'https://poshmonger.github.io/Tropical_Nucleus-Art-By-Mark-T-Cole-/'
     },
-
- 
-
   ];
-  const projects_tab2 = [
+
+  const projects_tab3 = [
     {
       title: "3D Projection",
       description: "Projecting 3d vertice coordinates onto a 2d plane using HTML canvas element for draw methods",
@@ -57,8 +83,6 @@ export const Projects = () => {
       github: 'https://github.com/PoshMonger/3-D-projection',
       deploy: 'https://poshmonger.github.io/3-D-projection/'
     },
-
- 
     {
       title: "Satelite Mini-Game",
       description: "Quick mini game built with HTML canvas element, es6 modules, webpack, and babel. ",
@@ -66,24 +90,19 @@ export const Projects = () => {
       github: 'https://github.com/PoshMonger/canvaslib',
       deploy: 'https://poshmonger.github.io/canvaslib/'
     },
-
     {
       title: "Simon Says Clone",
       description: "Another rendition of a timeless classic",
       imgUrl: joeSays,
       deploy: 'https://poshmonger.github.io/Joe-Says/',
       github: 'https://github.com/PoshMonger/Joe-Says'
-
     },
     {
       title: "UI/UX Effects Library (beta)",
       description: "Javascript and CSS library to add to vanilla web projects to add basic UI effects like side menu and focusing an image",
       imgUrl: UIeffects,
       github: 'https://github.com/PoshMonger/UI-Effects',
-
     },
-
-
   ];
   return (
     <section className="project" id="projects">
@@ -114,16 +133,12 @@ export const Projects = () => {
                             projects_tab1.map((project, index) => {
                               return (
                                 <ProjectCard
-
                                   key={index}
                                   {...project}
                                 />
                               )
                             })
-
-
                           }
-                
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
@@ -135,22 +150,24 @@ export const Projects = () => {
                                   key={index}
                                   {...project}
                                 />
-                                
                               )
-                              
                             })
                           }
-                          
                         </Row>
                       </Tab.Pane>
                       <Tab.Pane eventKey="third">
-                      <Row xs={12} sm={12} md={12} lg={12} xl={12}>
-                      <p>If you wish to see some of my other repositories feel free to <p className='myGitHub'>check out my github:</p>
-                       <br/><a href='https://github.com/PoshMonger' target='blank' rel="noreferrer"> <Button className='proj-button-github'>PoshMonger</Button></a>
-                        </p>
-                          
+                        <Row xs={2} sm={2} md={2} lg={2} xl={2}>
+                          {
+                            projects_tab3.map((project, index) => {
+                              return (
+                                <ProjectCard
+                                  key={index}
+                                  {...project}
+                                />
+                              )
+                            })
+                          }
                         </Row>
-                      
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
@@ -159,7 +176,6 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-     
     </section>
   )
 }
