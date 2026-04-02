@@ -1,5 +1,4 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
-import { Button } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import dealuploader from '../assets/img/projects/dealuploader.png'
 import joeSays from '../assets/img/projects/JOE_SAYS.png'
