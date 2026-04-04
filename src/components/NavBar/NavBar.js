@@ -5,7 +5,7 @@ import nameOnlyLogo from '../../assets/img/nameOnlyLogo.svg'
 import navIcon1 from '../../assets/img/nav-icon1.svg';
 import navIcon2 from '../../assets/img/nav-icon2.svg';
 import { Button } from "react-bootstrap";
-import PDF from '../Resume/resume.pdf'
+import PDF from '../Resume/joe_schlitz_resume_2026.pdf'
 import {
   BrowserRouter as Router
 } from "react-router-dom";
